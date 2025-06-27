@@ -6,7 +6,7 @@ namespace Student_App
     {
         static void Main(string[] args)
         {
-            //object creation using default constructor
+            //Student array to store objects
             Student[] students = new Student[3];
             int count = 0;
             int rollNo;
