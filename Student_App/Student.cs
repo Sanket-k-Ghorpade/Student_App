@@ -20,17 +20,20 @@ namespace Student_App
         //Parameterised Constructor
         public Student(int rollNo, string name, double cgpa)
         {
-            if(rollNo < 0) { throw new ArgumentOutOfRangeException(nameof(rollNo), "Roll no should be positive"); }
-            if(cgpa < 1 || cgpa > 10) { throw new ArgumentOutOfRangeException(nameof(cgpa), "CGPA should be in the range 1-10"); }
             RollNo = rollNo;
             CGPA = cgpa;
-            if (name.Length < 5) Name = "";
-            else Name = name;
+            Name = name;
+            Console.WriteLine("Object created successfully");
         }
 
         public double CalculatePercentage()
         {
             return percentage = Math.Round(7.1 * CGPA + 11,2);
+        }
+
+        public override string ToString()
+        {
+            return $"Roll No: {RollNo}, Name: {Name}, CGPA: {CGPA}";
         }
     }
 }
